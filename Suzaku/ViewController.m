@@ -12,8 +12,7 @@
 #import "NSDate+ITK_Time.h"
 #import "MainWindowButtonGroupView.h"
 #import <Quartz/Quartz.h>
-
-
+#import "ITKDeviceUtil.h"
 
 
 static NSString* const kJSObjectName = @"Observe";
@@ -27,6 +26,7 @@ static const CGFloat pageAnimDuration = 0.6f;
 @property (weak) IBOutlet NSView *sidebarView;
 @property (weak) IBOutlet NSImageView *logo;
 @property (weak) IBOutlet NSView *aboutMe;
+@property (weak) IBOutlet NSTextFieldCell *appVersion;
 
 - (IBAction)toggleInfo:(id)sender;
 
@@ -36,7 +36,6 @@ static const CGFloat pageAnimDuration = 0.6f;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self setBackground];
     [self setupWindowButtons];
     
@@ -45,21 +44,36 @@ static const CGFloat pageAnimDuration = 0.6f;
     
     WKWebViewConfiguration *config = [WKWebViewConfiguration new];
     config.userContentController = controller;
-
+    
     WKWebView *web = [[WKWebView alloc] initWithFrame:CGRectMake(0, 0, self.contentView.frame.size.width, self.view.frame.size.height - 20) configuration:config];
     
     _webview = web;
+    _webview.window.backgroundColor = [NSColor redColor];
+    [self.contentView addSubview:_webview];
     
-    // html file path
+    // 监听app resume
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appResumeEvent) name:NSApplicationWillBecomeActiveNotification object:nil];
+    
+    // get App versoin
+    NSString *appVersion = [ITKDeviceUtil appVersionName];
+    self.appVersion.title = [NSString stringWithFormat:@"软件版本：%@",appVersion];
+}
+
+- (void) appResumeEvent{
+    [self loadData];
+}
+
+- (void) loadData{
     NSString *path = [[NSBundle mainBundle] pathForResource:@"index.html" ofType:nil inDirectory:@"chart"];
     if (path) {
         NSURL *url = [NSURL fileURLWithPath:path];
         [_webview loadRequest:[NSURLRequest requestWithURL:url]];
-        _webview.window.backgroundColor = [NSColor redColor];
-        
-        [self.contentView addSubview:_webview];
     }
-    
+}
+
+- (void)viewDidAppear{
+    [self loadData];
 }
 
 #pragma mark - about me
@@ -90,7 +104,9 @@ static const CGFloat pageAnimDuration = 0.6f;
     }
 }
 
-
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
 
 #pragma mark - window buttons
 
@@ -210,7 +226,6 @@ static const CGFloat pageAnimDuration = 0.6f;
             int time = [[item objectForKey:@"time"] intValue];
             
             if (time == 0 && [itemDate compare:currentDate] == NSOrderedDescending) {
-                NSLog(@"%d",(int)item[@"time"]);
                 break;
             }
             

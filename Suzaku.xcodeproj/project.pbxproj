@@ -28,6 +28,7 @@
 		CE0AA4621B9984F600104AC4 /* SideBarBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4611B9984F600104AC4 /* SideBarBgView.m */; };
 		CE0AA4681B99865A00104AC4 /* NSApplication+MXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */; };
 		CE0AA46C1B9987AF00104AC4 /* StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA46B1B9987AF00104AC4 /* StatusBar.m */; };
+		CE0AA4721B99FFD400104AC4 /* ITKDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,8 @@
 		CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MXUtilities.m"; sourceTree = "<group>"; };
 		CE0AA46A1B9987AF00104AC4 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBar.h; sourceTree = "<group>"; };
 		CE0AA46B1B9987AF00104AC4 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBar.m; sourceTree = "<group>"; };
+		CE0AA4701B99FFD400104AC4 /* ITKDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITKDeviceUtil.h; sourceTree = "<group>"; };
+		CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITKDeviceUtil.m; sourceTree = "<group>"; };
 		F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Suzaku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -268,6 +271,7 @@
 		CE0AA4641B99863200104AC4 /* components */ = {
 			isa = PBXGroup;
 			children = (
+				CE0AA46F1B99FFD400104AC4 /* util */,
 				CE0AA4651B99865A00104AC4 /* launchStart */,
 				CE0AA43F1B99837500104AC4 /* category */,
 			);
@@ -290,6 +294,15 @@
 				CE0AA46B1B9987AF00104AC4 /* StatusBar.m */,
 			);
 			name = StatusBar;
+			sourceTree = "<group>";
+		};
+		CE0AA46F1B99FFD400104AC4 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4701B99FFD400104AC4 /* ITKDeviceUtil.h */,
+				CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -428,6 +441,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0AA4721B99FFD400104AC4 /* ITKDeviceUtil.m in Sources */,
 				CE0AA43E1B99836200104AC4 /* browser.m in Sources */,
 				CE0AA4491B9983A900104AC4 /* Config.m in Sources */,
 				CE0AA45B1B99840B00104AC4 /* MainWindow.m in Sources */,

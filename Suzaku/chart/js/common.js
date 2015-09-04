@@ -60,8 +60,8 @@ function formatData(res){
                         borderWidth:8
                     },
                     data : [
-                        {type : 'max', name: '最大值'},
-                        {type : 'min', name: '最小值'}
+                        {type : 'max', name: '最长'},
+                        {type : 'min', name: '最短'}
                     ]
                 },
                 markLine : {
@@ -82,6 +82,8 @@ function renderData(res){
     chart.css({height:height,width:width});
     var myChart = echarts.init(chart[0],theme);
     myChart.setOption(formatData(res));
+
+    renderNotice(res);
 }
 
 $('#buttons').on('click','button',function(){
@@ -354,81 +356,91 @@ var theme = {
     }
 };
 
+var noticeInfo = {
+    nothing : "目前还没有您使用电脑时间的数据统计，请稍安勿躁；如果不会操作该软件，请查阅使用说明。",
+    level1  : [
+        '非常不错，你每天使用电脑的时间把握的是如此之好，给你一个大大的赞！',
+        '你懂的珍爱生命，远离电脑，所以你不会多上网，真要夸夸你啊',
+        '你的习惯不错啊，每天上网平均小于2小时，科学上网，继续保持！',
+        '看来你在现实世界里真是如鱼得水啊，才让你如此的克制，不沉默虚拟世界',
+        '你打败了全国一大批重度依赖电脑的种子选手，你就是第一名，加油！'
+    ],
+    level2  : [
+        '你使用电脑的时间有点过长了哟，还是少上点网，注意身体健康！',
+        '悠着点哟亲！你上网时间有点多，给你提个醒，注意休息！',
+        '还是不要老玩电脑啦！请多注意一下身边被您遗忘的风景！'
+    ],
+    level3  : [
+        '外面风景挺好的，停一会儿玩电脑吧，注意休息！你使用电脑有点子长啊',
+        '长时间对着电脑注意防辐射哟，也别让眼睛太干涩，适当用点眼药水呗！',
+        '你至少用了一天的三分之一的时间在玩电脑，你这样真的好吗！'
+    ],
+    level4  : [
+        '我说亲，咋给你说这事呢，一天的时间就这么长，而你却用了多半时间在玩电脑啊，玩出花儿了吗？',
+        '你这么喜欢电脑，干脆和它结婚算啦！一天的好时光你都给它了，付出真不少！',
+        '你每天使用电脑的时间严重超标！头儿说了，你再这样下去，就把你关禁闭！'
+    ]
+};
+
+function renderNotice(res){
+    var notice = $('#notice');
+    if (res && res.data && res.data.length > 0) {
+        var total = 0,
+            len = res.data.length;
+        for(var i=0;i<len;i++){
+            total += res.data[i];
+        }
+
+        var average = total / len;
+        removeAllClass(notice);
+        if (average > 12) {
+            notice.addClass('alert-danger');
+            notice.html(getRandomValue(noticeInfo.level4));
+        }else if (average > 8) {
+            notice.addClass('alert-warning');
+            notice.html(getRandomValue(noticeInfo.level3));
+        } else if (average > 2) {
+            notice.addClass('alert-info');
+            notice.html(getRandomValue(noticeInfo.level2));
+        } else if (average > 0) {
+            notice.addClass('alert-success');
+            notice.html(getRandomValue(noticeInfo.level1));
+        }else{
+            showNothing(notice);
+        }
+
+    }else {
+        showNothing(notice);
+    }
+}
+
+function getRandomValue(arr){
+    var index = Math.round(Math.random() * 100) % arr.length;
+    return arr[index];
+}
+
+function showNothing(notice){
+    removeAllClass(notice);
+    notice.addClass('alert-success');
+    notice.html(noticeInfo.nothing);
+}
+
+function removeAllClass(notice){
+    notice.removeClass('alert-success');
+    notice.removeClass('alert-info');
+    notice.removeClass('alert-warning');
+    notice.removeClass('alert-danger');
+}
 
 
 $(window).on('load',function(){
     requestData('week');
-/*
-    var weekData = {
-        "labels" : [
-            "09.01",
-            "09.02",
-            "09.03",
-            "09.04",
-            "09.05",
-            "09.06",
-            "09.07",
-            "09.08",
-            "09.09",
-            "09.10",
-            "09.11",
-            "09.12",
-            "09.13",
-            "09.14",
-            "09.15",
-            "09.16",
-            "09.17",
-            "09.18",
-            "09.19",
-            "09.20",
-            "09.21",
-            "09.22",
-            "09.23",
-            "09.24",
-            "09.25",
-            "09.26",
-            "09.27",
-            "09.28",
-            "09.29",
-            "09.30",
-            "09.31"
-        ],
-        "data" : [
-            1.81,
-            3.14,
-            3.6,
-            4.14,
-            5.14,
-            6.14,
-            3.14,
-            2.14,
-            8.14,
-            10.14,
-            5.14,
-            6.14,
-            3.14,
-            8.14,
-            9.14,
-            10.14,
-            17.14,
-            9,
-            13,
-            15,
-            8.2,
-            9.1,
-            6.3,
-            0,
-            14,
-            12,
-            11,
-            3,
-            6,
-            8,
-            4.09
-        ]
-    };
-*/
 
-    //renderData(weekData);
+    /*var weekData = {
+        "labels" : ["09.01", "09.02", "09.03", "09.04", "09.05", "09.06"],
+        "data" : [14, 12, 10, 18, 20, 14]
+    };
+
+    renderData(weekData);*/
 
 });
