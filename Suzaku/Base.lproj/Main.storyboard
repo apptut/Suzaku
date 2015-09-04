@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate"/>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6"/>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+            </objects>
+            <point key="canvasLocation" x="-239" y="-49.5"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="vBT-ad-moQ">
+            <objects>
+                <customObject id="XIk-cR-eqc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <windowController storyboardIdentifier="MainWindowController" id="5bl-xr-8hj" customClass="MainWindowController" sceneMemberID="viewController">
+                    <window key="window" identifier="mainWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="9xL-Cc-B0x" customClass="MainWindow">
+                        <rect key="contentRect" x="163" y="199" width="900" height="450"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
+                    </window>
+                    <connections>
+                        <segue destination="DjW-2D-O6g" kind="relationship" relationship="window.shadowedContentViewController" id="2FN-aV-yMc"/>
+                    </connections>
+                </windowController>
+            </objects>
+            <point key="canvasLocation" x="-462" y="177"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Vq-6A-wPa">
+            <objects>
+                <customObject id="f2X-VW-L24" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="DjW-2D-O6g" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" id="dre-YY-vwP">
+                        <rect key="frame" x="0.0" y="0.0" width="900" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Myb-gZ-An9" userLabel="sidebar">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="450"/>
+                                <subviews>
+                                    <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V1Y-Tj-IYp">
+                                        <rect key="frame" x="42" y="300" width="66" height="66"/>
+                                        <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="logo" id="DHV-mq-YgD"/>
+                                    </imageView>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dL7-Yj-1LF">
+                                        <rect key="frame" x="34" y="275" width="82" height="17"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="电脑使用统计" id="L86-Bo-FhW">
+                                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jn8-MU-8md">
+                                        <rect key="frame" x="10" y="10" width="25" height="25"/>
+                                        <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="zOA-lN-eM0">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleInfo:" target="DjW-2D-O6g" id="2fg-c8-2O7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5PK-NY-6HP" userLabel="content">
+                                <rect key="frame" x="150" y="0.0" width="750" height="450"/>
+                            </customView>
+                            <customView hidden="YES" wantsLayer="YES" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TZK-4E-SmP" userLabel="aboutMe">
+                                <rect key="frame" x="150" y="0.0" width="750" height="450"/>
+                                <subviews>
+                                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nwn-Jz-9wb">
+                                        <rect key="frame" x="18" y="398" width="34" height="35"/>
+                                        <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="arrow-left" imagePosition="overlaps" alignment="center" state="on" borderStyle="border" inset="2" id="Ua2-qK-P0k">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="toggleInfo:" target="DjW-2D-O6g" id="Ubo-lY-bm8"/>
+                                        </connections>
+                                    </button>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDw-V3-JNA">
+                                        <rect key="frame" x="18" y="355" width="48" height="23"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="说明" id="Xu2-0Z-azf">
+                                            <font key="font" size="22" name="STHeitiSC-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rBn-fC-Ona">
+                                        <rect key="frame" x="18" y="308" width="706" height="39"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="该软件用于统计用户每天使用电脑的时间，并根据使用情况做出相应的健康建议提醒。使用该软件很简单，只需运行该软件即可，无需额外操作。" id="Xg7-Cl-tFy">
+                                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5xW-jZ-m3p">
+                                        <rect key="frame" x="18" y="279" width="34" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="注意" id="e4R-fG-9lO">
+                                            <font key="font" size="15" name="STHeitiSC-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="znR-d0-E70">
+                                        <rect key="frame" x="18" y="235" width="706" height="34"/>
+                                        <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="当前软件版本不做任何同步用户信息的操作，如果用户卸载该软件，当前用户使用数据不会被保留，请自行保留相应数据！" id="ssv-oq-Pd1">
+                                            <font key="font" size="13" name="STHeitiSC-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ug-dO-MSe">
+                                        <rect key="frame" x="18" y="154" width="178" height="19"/>
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="软件版本：v1.0.0" id="CvZ-aE-f6B">
+                                            <font key="font" size="15" name="STHeitiSC-Light"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
+                                </subviews>
+                            </customView>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="aboutMe" destination="TZK-4E-SmP" id="cYW-EI-uqV"/>
+                        <outlet property="contentView" destination="5PK-NY-6HP" id="sP3-43-RI0"/>
+                        <outlet property="logo" destination="V1Y-Tj-IYp" id="tOY-Ie-F5s"/>
+                        <outlet property="sidebarView" destination="Myb-gZ-An9" id="eHt-5w-cUG"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-462" y="727"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow-left" width="16" height="16"/>
+        <image name="logo" width="837.81817626953125" height="837.81817626953125"/>
+    </resources>
+</document>

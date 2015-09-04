@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29FFC4A4FC5DBA98B2C28432 /* libPods-Suzaku.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */; };
+		CE0AA41B1B99808400104AC4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA41A1B99808400104AC4 /* AppDelegate.m */; };
+		CE0AA41D1B99808400104AC4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA41C1B99808400104AC4 /* main.m */; };
+		CE0AA4201B99808400104AC4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA41F1B99808400104AC4 /* ViewController.m */; };
+		CE0AA4221B99808400104AC4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE0AA4211B99808400104AC4 /* Images.xcassets */; };
+		CE0AA4251B99808400104AC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE0AA4231B99808400104AC4 /* Main.storyboard */; };
+		CE0AA4311B99808400104AC4 /* SuzakuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4301B99808400104AC4 /* SuzakuTests.m */; };
+		CE0AA43B1B9982B700104AC4 /* StatusMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE0AA43A1B9982B700104AC4 /* StatusMenu.xib */; };
+		CE0AA43E1B99836200104AC4 /* browser.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA43D1B99836200104AC4 /* browser.m */; };
+		CE0AA4431B99837500104AC4 /* NSDate+ITK_Time.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4421B99837500104AC4 /* NSDate+ITK_Time.m */; };
+		CE0AA4451B99838500104AC4 /* chart in Resources */ = {isa = PBXBuildFile; fileRef = CE0AA4441B99838500104AC4 /* chart */; };
+		CE0AA4491B9983A900104AC4 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4481B9983A900104AC4 /* Config.m */; };
+		CE0AA44D1B9983CD00104AC4 /* History.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA44C1B9983CD00104AC4 /* History.m */; };
+		CE0AA4501B9983DE00104AC4 /* OnlineStatistics.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA44F1B9983DE00104AC4 /* OnlineStatistics.m */; };
+		CE0AA4531B9983E700104AC4 /* Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4511B9983E700104AC4 /* Record.xcdatamodeld */; };
+		CE0AA45B1B99840B00104AC4 /* MainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4561B99840B00104AC4 /* MainWindow.m */; };
+		CE0AA45C1B99840B00104AC4 /* MainWindowButtonGroupView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4581B99840B00104AC4 /* MainWindowButtonGroupView.m */; };
+		CE0AA45D1B99840B00104AC4 /* MainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA45A1B99840B00104AC4 /* MainWindowController.m */; };
+		CE0AA4621B9984F600104AC4 /* SideBarBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4611B9984F600104AC4 /* SideBarBgView.m */; };
+		CE0AA4681B99865A00104AC4 /* NSApplication+MXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */; };
+		CE0AA46C1B9987AF00104AC4 /* StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA46B1B9987AF00104AC4 /* StatusBar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CE0AA42B1B99808400104AC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CE0AA40C1B99808400104AC4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE0AA4131B99808400104AC4;
+			remoteInfo = Suzaku;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06478B525D95B699D0F2E005 /* Pods-Suzaku.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suzaku.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Suzaku/Pods-Suzaku.debug.xcconfig"; sourceTree = "<group>"; };
+		79D088EA2BEB92AFC8E4DA8D /* Pods-Suzaku.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Suzaku.release.xcconfig"; path = "Pods/Target Support Files/Pods-Suzaku/Pods-Suzaku.release.xcconfig"; sourceTree = "<group>"; };
+		CE0AA4141B99808400104AC4 /* Suzaku.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Suzaku.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0AA4181B99808400104AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0AA4191B99808400104AC4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CE0AA41A1B99808400104AC4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CE0AA41C1B99808400104AC4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CE0AA41E1B99808400104AC4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CE0AA41F1B99808400104AC4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CE0AA4211B99808400104AC4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CE0AA4241B99808400104AC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE0AA42A1B99808400104AC4 /* SuzakuTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuzakuTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0AA42F1B99808400104AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE0AA4301B99808400104AC4 /* SuzakuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SuzakuTests.m; sourceTree = "<group>"; };
+		CE0AA43A1B9982B700104AC4 /* StatusMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatusMenu.xib; sourceTree = "<group>"; };
+		CE0AA43C1B99836200104AC4 /* browser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = browser.h; sourceTree = "<group>"; };
+		CE0AA43D1B99836200104AC4 /* browser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = browser.m; sourceTree = "<group>"; };
+		CE0AA4411B99837500104AC4 /* NSDate+ITK_Time.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+ITK_Time.h"; sourceTree = "<group>"; };
+		CE0AA4421B99837500104AC4 /* NSDate+ITK_Time.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ITK_Time.m"; sourceTree = "<group>"; };
+		CE0AA4441B99838500104AC4 /* chart */ = {isa = PBXFileReference; lastKnownFileType = folder; path = chart; sourceTree = "<group>"; };
+		CE0AA4471B9983A900104AC4 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		CE0AA4481B9983A900104AC4 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		CE0AA44B1B9983CD00104AC4 /* History.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = History.h; sourceTree = "<group>"; };
+		CE0AA44C1B9983CD00104AC4 /* History.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = History.m; sourceTree = "<group>"; };
+		CE0AA44E1B9983DE00104AC4 /* OnlineStatistics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineStatistics.h; sourceTree = "<group>"; };
+		CE0AA44F1B9983DE00104AC4 /* OnlineStatistics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineStatistics.m; sourceTree = "<group>"; };
+		CE0AA4521B9983E700104AC4 /* Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Record.xcdatamodel; sourceTree = "<group>"; };
+		CE0AA4551B99840B00104AC4 /* MainWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindow.h; sourceTree = "<group>"; };
+		CE0AA4561B99840B00104AC4 /* MainWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindow.m; sourceTree = "<group>"; };
+		CE0AA4571B99840B00104AC4 /* MainWindowButtonGroupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowButtonGroupView.h; sourceTree = "<group>"; };
+		CE0AA4581B99840B00104AC4 /* MainWindowButtonGroupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowButtonGroupView.m; sourceTree = "<group>"; };
+		CE0AA4591B99840B00104AC4 /* MainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainWindowController.h; sourceTree = "<group>"; };
+		CE0AA45A1B99840B00104AC4 /* MainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainWindowController.m; sourceTree = "<group>"; };
+		CE0AA4601B9984F600104AC4 /* SideBarBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideBarBgView.h; sourceTree = "<group>"; };
+		CE0AA4611B9984F600104AC4 /* SideBarBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideBarBgView.m; sourceTree = "<group>"; };
+		CE0AA4661B99865A00104AC4 /* NSApplication+MXUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSApplication+MXUtilities.h"; sourceTree = "<group>"; };
+		CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSApplication+MXUtilities.m"; sourceTree = "<group>"; };
+		CE0AA46A1B9987AF00104AC4 /* StatusBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusBar.h; sourceTree = "<group>"; };
+		CE0AA46B1B9987AF00104AC4 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBar.m; sourceTree = "<group>"; };
+		F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Suzaku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE0AA4111B99808400104AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29FFC4A4FC5DBA98B2C28432 /* libPods-Suzaku.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0AA4271B99808400104AC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6AB03A8C5BC63FBECDF398E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEAA3A7BB4FC32A04B89A45F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				06478B525D95B699D0F2E005 /* Pods-Suzaku.debug.xcconfig */,
+				79D088EA2BEB92AFC8E4DA8D /* Pods-Suzaku.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CE0AA40B1B99808400104AC4 = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4161B99808400104AC4 /* Suzaku */,
+				CE0AA42D1B99808400104AC4 /* SuzakuTests */,
+				CE0AA4151B99808400104AC4 /* Products */,
+				AEAA3A7BB4FC32A04B89A45F /* Pods */,
+				6AB03A8C5BC63FBECDF398E3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CE0AA4151B99808400104AC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4141B99808400104AC4 /* Suzaku.app */,
+				CE0AA42A1B99808400104AC4 /* SuzakuTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE0AA4161B99808400104AC4 /* Suzaku */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4691B99879100104AC4 /* StatusBar */,
+				CE0AA4641B99863200104AC4 /* components */,
+				CE0AA45F1B9984D300104AC4 /* views */,
+				CE0AA45E1B9984BC00104AC4 /* webview */,
+				CE0AA4541B9983F200104AC4 /* window */,
+				CE0AA44A1B9983B700104AC4 /* coreData */,
+				CE0AA4461B99839900104AC4 /* core */,
+				CE0AA4441B99838500104AC4 /* chart */,
+				CE0AA43A1B9982B700104AC4 /* StatusMenu.xib */,
+				CE0AA4191B99808400104AC4 /* AppDelegate.h */,
+				CE0AA41A1B99808400104AC4 /* AppDelegate.m */,
+				CE0AA41E1B99808400104AC4 /* ViewController.h */,
+				CE0AA41F1B99808400104AC4 /* ViewController.m */,
+				CE0AA4211B99808400104AC4 /* Images.xcassets */,
+				CE0AA4231B99808400104AC4 /* Main.storyboard */,
+				CE0AA4171B99808400104AC4 /* Supporting Files */,
+			);
+			path = Suzaku;
+			sourceTree = "<group>";
+		};
+		CE0AA4171B99808400104AC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4181B99808400104AC4 /* Info.plist */,
+				CE0AA41C1B99808400104AC4 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0AA42D1B99808400104AC4 /* SuzakuTests */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4301B99808400104AC4 /* SuzakuTests.m */,
+				CE0AA42E1B99808400104AC4 /* Supporting Files */,
+			);
+			path = SuzakuTests;
+			sourceTree = "<group>";
+		};
+		CE0AA42E1B99808400104AC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA42F1B99808400104AC4 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CE0AA43F1B99837500104AC4 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4401B99837500104AC4 /* NSDate */,
+			);
+			path = category;
+			sourceTree = "<group>";
+		};
+		CE0AA4401B99837500104AC4 /* NSDate */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4411B99837500104AC4 /* NSDate+ITK_Time.h */,
+				CE0AA4421B99837500104AC4 /* NSDate+ITK_Time.m */,
+			);
+			path = NSDate;
+			sourceTree = "<group>";
+		};
+		CE0AA4461B99839900104AC4 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4631B99853B00104AC4 /* config */,
+			);
+			name = core;
+			sourceTree = "<group>";
+		};
+		CE0AA44A1B9983B700104AC4 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA44B1B9983CD00104AC4 /* History.h */,
+				CE0AA44C1B9983CD00104AC4 /* History.m */,
+				CE0AA44E1B9983DE00104AC4 /* OnlineStatistics.h */,
+				CE0AA44F1B9983DE00104AC4 /* OnlineStatistics.m */,
+				CE0AA4511B9983E700104AC4 /* Record.xcdatamodeld */,
+			);
+			name = coreData;
+			sourceTree = "<group>";
+		};
+		CE0AA4541B9983F200104AC4 /* window */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4551B99840B00104AC4 /* MainWindow.h */,
+				CE0AA4561B99840B00104AC4 /* MainWindow.m */,
+				CE0AA4591B99840B00104AC4 /* MainWindowController.h */,
+				CE0AA45A1B99840B00104AC4 /* MainWindowController.m */,
+			);
+			name = window;
+			sourceTree = "<group>";
+		};
+		CE0AA45E1B9984BC00104AC4 /* webview */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA43C1B99836200104AC4 /* browser.h */,
+				CE0AA43D1B99836200104AC4 /* browser.m */,
+			);
+			name = webview;
+			sourceTree = "<group>";
+		};
+		CE0AA45F1B9984D300104AC4 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4601B9984F600104AC4 /* SideBarBgView.h */,
+				CE0AA4611B9984F600104AC4 /* SideBarBgView.m */,
+				CE0AA4571B99840B00104AC4 /* MainWindowButtonGroupView.h */,
+				CE0AA4581B99840B00104AC4 /* MainWindowButtonGroupView.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		CE0AA4631B99853B00104AC4 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4471B9983A900104AC4 /* Config.h */,
+				CE0AA4481B9983A900104AC4 /* Config.m */,
+			);
+			name = config;
+			sourceTree = "<group>";
+		};
+		CE0AA4641B99863200104AC4 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4651B99865A00104AC4 /* launchStart */,
+				CE0AA43F1B99837500104AC4 /* category */,
+			);
+			name = components;
+			sourceTree = "<group>";
+		};
+		CE0AA4651B99865A00104AC4 /* launchStart */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA4661B99865A00104AC4 /* NSApplication+MXUtilities.h */,
+				CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */,
+			);
+			path = launchStart;
+			sourceTree = "<group>";
+		};
+		CE0AA4691B99879100104AC4 /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE0AA46A1B9987AF00104AC4 /* StatusBar.h */,
+				CE0AA46B1B9987AF00104AC4 /* StatusBar.m */,
+			);
+			name = StatusBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE0AA4131B99808400104AC4 /* Suzaku */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0AA4341B99808400104AC4 /* Build configuration list for PBXNativeTarget "Suzaku" */;
+			buildPhases = (
+				F8293306CFD8B8C51432FE2D /* Check Pods Manifest.lock */,
+				CE0AA4101B99808400104AC4 /* Sources */,
+				CE0AA4111B99808400104AC4 /* Frameworks */,
+				CE0AA4121B99808400104AC4 /* Resources */,
+				44645EE394A84277A3F15612 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Suzaku;
+			productName = Suzaku;
+			productReference = CE0AA4141B99808400104AC4 /* Suzaku.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CE0AA4291B99808400104AC4 /* SuzakuTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE0AA4371B99808400104AC4 /* Build configuration list for PBXNativeTarget "SuzakuTests" */;
+			buildPhases = (
+				CE0AA4261B99808400104AC4 /* Sources */,
+				CE0AA4271B99808400104AC4 /* Frameworks */,
+				CE0AA4281B99808400104AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CE0AA42C1B99808400104AC4 /* PBXTargetDependency */,
+			);
+			name = SuzakuTests;
+			productName = SuzakuTests;
+			productReference = CE0AA42A1B99808400104AC4 /* SuzakuTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE0AA40C1B99808400104AC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = apptut;
+				TargetAttributes = {
+					CE0AA4131B99808400104AC4 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					CE0AA4291B99808400104AC4 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = CE0AA4131B99808400104AC4;
+					};
+				};
+			};
+			buildConfigurationList = CE0AA40F1B99808400104AC4 /* Build configuration list for PBXProject "Suzaku" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE0AA40B1B99808400104AC4;
+			productRefGroup = CE0AA4151B99808400104AC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE0AA4131B99808400104AC4 /* Suzaku */,
+				CE0AA4291B99808400104AC4 /* SuzakuTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE0AA4121B99808400104AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0AA4221B99808400104AC4 /* Images.xcassets in Resources */,
+				CE0AA4251B99808400104AC4 /* Main.storyboard in Resources */,
+				CE0AA43B1B9982B700104AC4 /* StatusMenu.xib in Resources */,
+				CE0AA4451B99838500104AC4 /* chart in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0AA4281B99808400104AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44645EE394A84277A3F15612 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Suzaku/Pods-Suzaku-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8293306CFD8B8C51432FE2D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE0AA4101B99808400104AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0AA43E1B99836200104AC4 /* browser.m in Sources */,
+				CE0AA4491B9983A900104AC4 /* Config.m in Sources */,
+				CE0AA45B1B99840B00104AC4 /* MainWindow.m in Sources */,
+				CE0AA45C1B99840B00104AC4 /* MainWindowButtonGroupView.m in Sources */,
+				CE0AA4201B99808400104AC4 /* ViewController.m in Sources */,
+				CE0AA4531B9983E700104AC4 /* Record.xcdatamodeld in Sources */,
+				CE0AA45D1B99840B00104AC4 /* MainWindowController.m in Sources */,
+				CE0AA41D1B99808400104AC4 /* main.m in Sources */,
+				CE0AA4431B99837500104AC4 /* NSDate+ITK_Time.m in Sources */,
+				CE0AA4501B9983DE00104AC4 /* OnlineStatistics.m in Sources */,
+				CE0AA44D1B9983CD00104AC4 /* History.m in Sources */,
+				CE0AA41B1B99808400104AC4 /* AppDelegate.m in Sources */,
+				CE0AA4621B9984F600104AC4 /* SideBarBgView.m in Sources */,
+				CE0AA46C1B9987AF00104AC4 /* StatusBar.m in Sources */,
+				CE0AA4681B99865A00104AC4 /* NSApplication+MXUtilities.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE0AA4261B99808400104AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE0AA4311B99808400104AC4 /* SuzakuTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CE0AA42C1B99808400104AC4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE0AA4131B99808400104AC4 /* Suzaku */;
+			targetProxy = CE0AA42B1B99808400104AC4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CE0AA4231B99808400104AC4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE0AA4241B99808400104AC4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE0AA4321B99808400104AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CE0AA4331B99808400104AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CE0AA4351B99808400104AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06478B525D95B699D0F2E005 /* Pods-Suzaku.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Suzaku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CE0AA4361B99808400104AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D088EA2BEB92AFC8E4DA8D /* Pods-Suzaku.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Suzaku/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		CE0AA4381B99808400104AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuzakuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suzaku.app/Contents/MacOS/Suzaku";
+			};
+			name = Debug;
+		};
+		CE0AA4391B99808400104AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SuzakuTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Suzaku.app/Contents/MacOS/Suzaku";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE0AA40F1B99808400104AC4 /* Build configuration list for PBXProject "Suzaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0AA4321B99808400104AC4 /* Debug */,
+				CE0AA4331B99808400104AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0AA4341B99808400104AC4 /* Build configuration list for PBXNativeTarget "Suzaku" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0AA4351B99808400104AC4 /* Debug */,
+				CE0AA4361B99808400104AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE0AA4371B99808400104AC4 /* Build configuration list for PBXNativeTarget "SuzakuTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE0AA4381B99808400104AC4 /* Debug */,
+				CE0AA4391B99808400104AC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CE0AA4511B9983E700104AC4 /* Record.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CE0AA4521B9983E700104AC4 /* Record.xcdatamodel */,
+			);
+			currentVersion = CE0AA4521B9983E700104AC4 /* Record.xcdatamodel */;
+			path = Record.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = CE0AA40C1B99808400104AC4 /* Project object */;
+}

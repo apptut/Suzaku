@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner"/>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <menu id="OiI-tW-jY9" customClass="StatusBar">
+            <items>
+                <menuItem title="查看统计数据" id="Rn1-JD-32o">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startLnmp:" target="OiI-tW-jY9" id="s2q-Uc-Emk"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="pCW-Qz-Dt6"/>
+                <menuItem title="退出" keyEquivalent="q" id="KHP-sx-pTa">
+                    <connections>
+                        <action selector="eventExit:" target="OiI-tW-jY9" id="7SA-mj-ict"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <connections>
+                <outlet property="delegate" destination="-2" id="Xar-hc-L7K"/>
+            </connections>
+            <point key="canvasLocation" x="166.5" y="193.5"/>
+        </menu>
+    </objects>
+</document>

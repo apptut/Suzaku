@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+    <title>Line Chart</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="./js/jquery-2.1.4.min.js"></script>
+    <style>
+        .chart-type{
+            position: absolute;
+            right: 80px;
+            top: 0;
+        }
+        .chart-type button{
+            outline: none!important;
+        }
+        .notice{
+            position: absolute;
+            bottom:0;
+            left: 80px;
+            right: 80px;
+            border-radius: 0;
+        }
+    </style>
+</head>
+<body oncontextmenu="return false;">
+<div>
+    <script src="./js/echarts-all.js"></script>
+    <div id="chart"></div>
+    <div class="btn-group chart-type" role="group" id="buttons">
+        <button type="button" data-index="week" class="btn btn-sm btn-default active">本周</button>
+        <button type="button" data-index="month" class="btn btn-sm btn-default">本月</button>
+    </div>
+    <div class="alert alert-success notice" role="alert" id="notice">一天个就知道趴在电脑上，你干脆和电脑结婚算啦！-_-!</div>
+</div>
+<script src="./js/common.js"></script>
+</body>
+</html>
