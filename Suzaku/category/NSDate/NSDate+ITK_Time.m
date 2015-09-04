@@ -98,7 +98,7 @@
 - (NSDate *) itk_rangeEnd:(int)days{
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay fromDate:self];
-    components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+    //components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
     
     components.hour = 0;
     components.minute = 0;

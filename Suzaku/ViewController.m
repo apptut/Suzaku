@@ -52,7 +52,6 @@ static const CGFloat pageAnimDuration = 0.6f;
     [self.contentView addSubview:_webview];
     
     // 监听app resume
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appResumeEvent) name:NSApplicationWillBecomeActiveNotification object:nil];
     
     // get App versoin
@@ -179,7 +178,8 @@ static const CGFloat pageAnimDuration = 0.6f;
         NSDictionary *item = [self queryDataItem:firstDay :i];
         if (item) {
             NSDate *itemDate = item[@"date"];
-            NSDate *currentDate = [NSDate localDate];
+            //NSDate *currentDate = [NSDate localDate];
+            NSDate *currentDate = [NSDate date];
             
             int time = [[item objectForKey:@"time"] intValue];
             
@@ -210,7 +210,8 @@ static const CGFloat pageAnimDuration = 0.6f;
 - (NSString *) getWeekData{
     
     // 本周开始时间
-    NSDate *date = [[[NSDate localDate] itk_lastMondayBeforeDate] itk_dayStart:0];
+    //NSDate *date = [[[NSDate localDate] itk_lastMondayBeforeDate] itk_dayStart:0];
+    NSDate *date = [[[NSDate date] itk_lastMondayBeforeDate] itk_dayStart:0];
     
     NSMutableArray *data = [NSMutableArray array];
     NSMutableArray *labels = [NSMutableArray array];
@@ -221,7 +222,8 @@ static const CGFloat pageAnimDuration = 0.6f;
         NSDictionary *item = [self queryDataItem:date :start];
         if (item) {
             NSDate *itemDate = item[@"date"];
-            NSDate *currentDate = [NSDate localDate];
+            //NSDate *currentDate = [NSDate localDate];
+            NSDate *currentDate = [NSDate date];
             
             int time = [[item objectForKey:@"time"] intValue];
             

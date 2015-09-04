@@ -53,9 +53,9 @@
     [ntfCenter addObserver:self selector:@selector(displaySleep) name:NSWorkspaceWillPowerOffNotification object:nil];
     
     // 设置开机自启动
-//    if (![NSApplication sharedApplication].launchAtLogin) {
-//        [[NSApplication sharedApplication] setLaunchAtLogin:YES];
-//    }
+    if (![NSApplication sharedApplication].launchAtLogin) {
+        [[NSApplication sharedApplication] setLaunchAtLogin:YES];
+    }
     
     // 电脑唤醒
     [ntfCenter addObserver:self selector:@selector(displayWake) name:NSWorkspaceDidWakeNotification
@@ -154,6 +154,9 @@
             online.day = [NSDate date];
             online.start_time = beginTime.time;
             online.end_time = endTime.time;
+            
+            NSLog(@"online:%@ : %ld",online.day,[online.day itk_timestamp]);
+            
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
        

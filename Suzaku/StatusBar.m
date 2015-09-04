@@ -25,6 +25,7 @@
     [delegate displaySleep];
     
     // todo 退出程序
-    exit(0);
+    [NSApp performSelector:@selector(terminate:) withObject:nil afterDelay:0.0];
+    //exit(0);
 }
 @end
