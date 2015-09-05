@@ -13,6 +13,7 @@
 #import "MainWindowButtonGroupView.h"
 #import <Quartz/Quartz.h>
 #import "ITKDeviceUtil.h"
+#import "AppLog.h"
 
 
 static NSString* const kJSObjectName = @"Observe";
@@ -27,12 +28,23 @@ static const CGFloat pageAnimDuration = 0.6f;
 @property (weak) IBOutlet NSImageView *logo;
 @property (weak) IBOutlet NSView *aboutMe;
 @property (weak) IBOutlet NSTextFieldCell *appVersion;
+@property (strong,nonatomic) NSDate *firstLaunch;
 
 - (IBAction)toggleInfo:(id)sender;
 
 @end
 
 @implementation ViewController
+
+- (NSDate *)firstLaunch{
+    if (!_firstLaunch) {
+        AppLog *log = [AppLog MR_findFirst];
+        if (log) {
+            _firstLaunch = log.time;
+        }
+    }
+    return _firstLaunch;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -219,7 +231,6 @@ static const CGFloat pageAnimDuration = 0.6f;
     NSArray *weekdays = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     
     // todo app first begin
-    
     for (int start = 0; start < weekdays.count; start++) {
         NSDictionary *item = [self queryDataItem:date :start];
         if (item) {
@@ -254,7 +265,14 @@ static const CGFloat pageAnimDuration = 0.6f;
 }
 
 - (NSDictionary *) queryDataItem:(NSDate *)date :(int)index{
+    
+    NSDate *firstStart = [self.firstLaunch itk_rangeEnd:0];
     NSDate *beginWeek = [date itk_rangeEnd:index];
+    
+    if ([beginWeek compare:firstStart] == NSOrderedAscending) {
+        return nil;
+    }
+    
     NSDate *endOfWeek = [date itk_rangeEnd:index+1];
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(day >= %@) AND (day < %@)", beginWeek, endOfWeek];
     

@@ -29,6 +29,7 @@
 		CE0AA4681B99865A00104AC4 /* NSApplication+MXUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4671B99865A00104AC4 /* NSApplication+MXUtilities.m */; };
 		CE0AA46C1B9987AF00104AC4 /* StatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA46B1B9987AF00104AC4 /* StatusBar.m */; };
 		CE0AA4721B99FFD400104AC4 /* ITKDeviceUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */; };
+		CE7F986A1B9A9D8C0019BC8E /* AppLog.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7F98691B9A9D8C0019BC8E /* AppLog.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,8 @@
 		CE0AA46B1B9987AF00104AC4 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBar.m; sourceTree = "<group>"; };
 		CE0AA4701B99FFD400104AC4 /* ITKDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITKDeviceUtil.h; sourceTree = "<group>"; };
 		CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITKDeviceUtil.m; sourceTree = "<group>"; };
+		CE7F98681B9A9D8C0019BC8E /* AppLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLog.h; sourceTree = "<group>"; };
+		CE7F98691B9A9D8C0019BC8E /* AppLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLog.m; sourceTree = "<group>"; };
 		F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Suzaku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -219,6 +222,8 @@
 		CE0AA44A1B9983B700104AC4 /* coreData */ = {
 			isa = PBXGroup;
 			children = (
+				CE7F98681B9A9D8C0019BC8E /* AppLog.h */,
+				CE7F98691B9A9D8C0019BC8E /* AppLog.m */,
 				CE0AA44B1B9983CD00104AC4 /* History.h */,
 				CE0AA44C1B9983CD00104AC4 /* History.m */,
 				CE0AA44E1B9983DE00104AC4 /* OnlineStatistics.h */,
@@ -457,6 +462,7 @@
 				CE0AA4621B9984F600104AC4 /* SideBarBgView.m in Sources */,
 				CE0AA46C1B9987AF00104AC4 /* StatusBar.m in Sources */,
 				CE0AA4681B99865A00104AC4 /* NSApplication+MXUtilities.m in Sources */,
+				CE7F986A1B9A9D8C0019BC8E /* AppLog.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

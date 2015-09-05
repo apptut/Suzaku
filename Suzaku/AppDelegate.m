@@ -15,6 +15,7 @@
 #import <MagicalRecord.h>
 #import "NSDate+ITK_Time.h"
 #import "NSApplication+MXUtilities.h"
+#import "AppLog.h"
 
 @interface AppDelegate ()
 
@@ -77,6 +78,17 @@
 #pragma mark - init db
 - (void) setupDb{
     [MagicalRecord setupCoreDataStackWithStoreNamed:kDbName];
+    
+    // detect firt launch
+    AppLog *applog = [AppLog MR_findFirst];
+    if (applog && [applog.status intValue] == 1) {
+        return;
+    }
+    
+    applog = [AppLog MR_createEntity];
+    applog.status = @1;
+    applog.time = [NSDate date];
+    [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
 }
 
 - (void)dealloc{
