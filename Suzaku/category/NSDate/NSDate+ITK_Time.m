@@ -59,7 +59,7 @@
     comps.minute = 0;
     comps.second = 0;
     
-    [comps setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    //[comps setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
     
     return [cal dateFromComponents:comps];
     
@@ -88,6 +88,7 @@
     NSInteger interval = [zone secondsFromGMTForDate: curUTCDate];
     return [curUTCDate dateByAddingTimeInterval: interval];
 }
+
 - (NSDate *) localDate{
     NSTimeZone *zone = [NSTimeZone localTimeZone];
     NSInteger interval = [zone secondsFromGMTForDate: self];
@@ -119,13 +120,10 @@
     
     NSCalendar *calendar = [NSCalendar currentCalendar];
     
-    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate
-                 interval:NULL forDate:fromDateTime];
-    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate
-                 interval:NULL forDate:toDateTime];
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&fromDate interval:NULL forDate:fromDateTime];
+    [calendar rangeOfUnit:NSCalendarUnitDay startDate:&toDate interval:NULL forDate:toDateTime];
     
-    NSDateComponents *difference = [calendar components:NSCalendarUnitDay
-                                               fromDate:fromDate toDate:toDate options:0];
+    NSDateComponents *difference = [calendar components:NSCalendarUnitDay fromDate:fromDate toDate:toDate options:0];
     
     return [difference day];
 }

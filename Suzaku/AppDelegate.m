@@ -155,8 +155,6 @@
             online.start_time = beginTime.time;
             online.end_time = endTime.time;
             
-            NSLog(@"online:%@ : %ld",online.day,[online.day itk_timestamp]);
-            
             [[NSManagedObjectContext MR_defaultContext] MR_saveToPersistentStoreAndWait];
         }
        
@@ -167,7 +165,7 @@
 
 - (NSDate *) removeTime:(NSDate *)toDate withHour:(int)hour{
     NSCalendar *cal = [NSCalendar currentCalendar];
-    [cal setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
+    //[cal setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:8]];
     
     NSDateComponents *comps = [cal components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:toDate];
     

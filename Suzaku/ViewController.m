@@ -218,6 +218,8 @@ static const CGFloat pageAnimDuration = 0.6f;
     
     NSArray *weekdays = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     
+    // todo app first begin
+    
     for (int start = 0; start < weekdays.count; start++) {
         NSDictionary *item = [self queryDataItem:date :start];
         if (item) {
