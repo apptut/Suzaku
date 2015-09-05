@@ -91,10 +91,8 @@ $('#buttons').on('click','button',function(){
         $(this).addClass('active').siblings().removeClass('active');
         if ($(this).data('index') == 'week') {
             requestData('week');
-            //renderData(weekData);
         }else{
             requestData('month');
-            //renderData(monthData);
         }
     }
 });
@@ -363,7 +361,7 @@ var noticeInfo = {
         '你懂得珍爱生命，远离电脑，所以你不会多上网，真要夸夸你啊',
         '你的习惯不错啊，每天上网平均小于2小时，科学上网，继续保持！',
         '看来你在现实世界里真是如鱼得水啊，才让你如此的克制，不沉默虚拟世界',
-        '你打败了全国一大批重度依赖电脑的种子选手，你就是第一名，加油！'
+        '哇塞，你绝对是个大大的良民！继续保持，年底给你发个良民证。'
     ],
     level2  : [
         '你使用电脑的时间有点过长了哟，还是少上点网，注意身体健康！',
@@ -435,12 +433,4 @@ function removeAllClass(notice){
 
 $(window).on('load',function(){
     requestData('week');
-
-    /*var weekData = {
-        "labels" : ["09.01", "09.02", "09.03", "09.04", "09.05", "09.06"],
-        "data" : [14, 12, 10, 18, 20, 14]
-    };
-
-    renderData(weekData);*/
-
 });

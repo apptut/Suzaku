@@ -84,6 +84,7 @@
 		CE0AA46B1B9987AF00104AC4 /* StatusBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusBar.m; sourceTree = "<group>"; };
 		CE0AA4701B99FFD400104AC4 /* ITKDeviceUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITKDeviceUtil.h; sourceTree = "<group>"; };
 		CE0AA4711B99FFD400104AC4 /* ITKDeviceUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITKDeviceUtil.m; sourceTree = "<group>"; };
+		CE2FE21F1B9B23A5001BEE88 /* Suzaku.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Suzaku.entitlements; sourceTree = "<group>"; };
 		CE7F98681B9A9D8C0019BC8E /* AppLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppLog.h; sourceTree = "<group>"; };
 		CE7F98691B9A9D8C0019BC8E /* AppLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppLog.m; sourceTree = "<group>"; };
 		F9C9BA303CEBF87BE41E850B /* libPods-Suzaku.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Suzaku.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +149,7 @@
 		CE0AA4161B99808400104AC4 /* Suzaku */ = {
 			isa = PBXGroup;
 			children = (
+				CE2FE21F1B9B23A5001BEE88 /* Suzaku.entitlements */,
 				CE0AA4691B99879100104AC4 /* StatusBar */,
 				CE0AA4641B99863200104AC4 /* components */,
 				CE0AA45F1B9984D300104AC4 /* views */,
@@ -361,6 +363,12 @@
 				TargetAttributes = {
 					CE0AA4131B99808400104AC4 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = Z865YP4AC3;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					CE0AA4291B99808400104AC4 = {
 						CreatedOnToolsVersion = 6.4;
@@ -513,7 +521,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -556,7 +564,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -580,7 +588,8 @@
 			baseConfigurationReference = 06478B525D95B699D0F2E005 /* Pods-Suzaku.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = Suzaku/Suzaku.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Suzaku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -593,7 +602,8 @@
 			baseConfigurationReference = 79D088EA2BEB92AFC8E4DA8D /* Pods-Suzaku.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = Suzaku/Suzaku.entitlements;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = Suzaku/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
